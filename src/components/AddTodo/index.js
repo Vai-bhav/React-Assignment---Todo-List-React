@@ -7,7 +7,7 @@ const AddTodo = ({todoListItems,setTodoListItems}) => {
         setTask(event.target.value);
     }
     const handleAddClick = () => {
-        if(!task==""){
+        if(task.trim().length){
             let taskList=[...todoListItems];
             taskList.push(task);
             setTodoListItems(taskList);

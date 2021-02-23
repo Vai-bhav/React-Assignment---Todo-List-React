@@ -12,7 +12,6 @@ const TodoItems = ({index,task,todoListItems,setTodoListItems}) => {
     setTodoListItems(copyArray);
   }
   const handleUpdate = () => {
-    // if(!updateTask==""){
     if(updateTask.trim().length){
       let copyArray=[...todoListItems];
       copyArray.splice(index,1,updateTask);
