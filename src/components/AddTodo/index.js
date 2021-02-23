@@ -20,7 +20,7 @@ const AddTodo = ({todoListItems,setTodoListItems}) => {
             <h1>Todo List</h1>
             <textarea id="task" value={task} onChange={handleTask} />
             <br />
-            <button id="btn" disabled={task.trim().length===0} onClick={handleAddClick}>Add</button>
+            <button id="btn" disabled={task.length===0} onClick={handleAddClick}>Add</button>
         </div>
     );
 };
