@@ -12,6 +12,7 @@ const TodoItems = ({index,task,todoListItems,setTodoListItems}) => {
     setTodoListItems(copyArray);
   }
   const handleUpdate = () => {
+    // if(!updateTask==""){
     if(updateTask.trim().length){
       let copyArray=[...todoListItems];
       copyArray.splice(index,1,updateTask);
@@ -28,7 +29,7 @@ const TodoItems = ({index,task,todoListItems,setTodoListItems}) => {
       return (
         <div>
           <textarea className="editTask" onChange={handleChangeText} defaultValue={task} />
-          <button className="saveTask" onClick={handleUpdate}>Save</button>
+          <button className="saveTask" disabled={updateTask.trim().length===0} onClick={handleUpdate}>Save</button>
         </div>
       );
     }else{
