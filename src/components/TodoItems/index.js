@@ -13,12 +13,12 @@ const TodoItems = ({index,task,todoListItems,setTodoListItems}) => {
   }
   const handleUpdate = () => {
     // if(!updateTask==""){
-    if(updateTask.trim().length){
+    // if(updateTask.trim().length){
       let copyArray=[...todoListItems];
       copyArray.splice(index,1,updateTask);
       setTodoListItems(copyArray);
       setIsEdit(false);
-    }
+    // }
 
   }
   const handleChangeText = (event) =>{
