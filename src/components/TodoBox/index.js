@@ -1,19 +1,19 @@
 import React from 'react';
 import TodoItems from '../TodoItems';
-
 const TodoBox = ({todoListItems,setTodoListItems}) => {
     return (
         <div className="todo-box">
             <h2>Todo List</h2>
             <ul>
                 {todoListItems.map((item,index)=>{
+                    if(item.length!==0)
                     return (
                         <li key={index} className="list">
-                            <TodoItems 
+                            <TodoItems
                                 index={index}
-                                task={item} 
-                                todoListItems={todoListItems} 
-                                setTodoListItems={setTodoListItems} 
+                                task={item}
+                                todoListItems={todoListItems}
+                                setTodoListItems={setTodoListItems}
                             />
                         </li>
                     );
@@ -22,5 +22,31 @@ const TodoBox = ({todoListItems,setTodoListItems}) => {
         </div>
     );
 };
-
 export default TodoBox;
+
+// import React from 'react';
+// import TodoItems from '../TodoItems';
+
+// const TodoBox = ({todoListItems,setTodoListItems}) => {
+//     return (
+//         <div className="todo-box">
+//             <h2>Todo List</h2>
+//             <ul>
+//                 {todoListItems.map((item,index)=>{
+//                     return (
+//                         <li key={index} className="list">
+//                             <TodoItems 
+//                                 index={index}
+//                                 task={item} 
+//                                 todoListItems={todoListItems} 
+//                                 setTodoListItems={setTodoListItems} 
+//                             />
+//                         </li>
+//                     );
+//                 })}
+//             </ul>
+//         </div>
+//     );
+// };
+
+// export default TodoBox;
